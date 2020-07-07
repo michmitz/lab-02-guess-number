@@ -1,5 +1,5 @@
 // import functions and grab DOM elements
-import { compareNumbers, randomNumber } from './guessUtils.js';
+import { compareNumbers, randomNumber, highOrLow } from './guessUtils.js';
 
 const userInput = document.querySelector('#input');
 console.log(userInput);
@@ -7,14 +7,40 @@ console.log(userInput);
 const myButton = document.querySelector('#button');
 console.log(myButton);
 
+const resultDisplay = document.querySelector('#Display-result');
+console.log(resultDisplay);
+
+const guessComparison = document.querySelector('#Display-guess-comparison');
+console.log(guessComparison);
+
 // initialize state
 
-let scoreCounter = 0;
+let triesLeft = 4;
 
 
 // set event listeners to update state and DOM
 
 myButton.addEventListener('click', () => {
-    const userGuess = Number(userInput);
+    const guess = Number(userInput);
+    const correctNumber = randomNumber();
+    const result = compareNumbers(guess, correctNumber);
+    const tooHighOrLow = highOrLow(result);
+
+    if (result === 0) {
+        resultDisplay.textContent = ('You won a Tesla!');
+    } else {
+        triesLeft--;
+        resultDisplay.textContent = `You have ${triesLeft} tries left. Your guess was ${tooHighOrLow}`;
+    }
+    
+    if (triesLeft > 0 && result !== 0) {
+        triesLeft--;
+        resultDisplay.textContent = `You have ${triesLeft} tries left. Your guess was ${tooHighOrLow}`;
+    }
+
+    if (triesLeft === 0 && result !== 0) {
+        resultDisplay.textContent = `You lost, sorry my dude.`;
+    }
+    
 
 });
