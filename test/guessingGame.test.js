@@ -1,4 +1,5 @@
 // IMPORT MODULES under test here:
+import { compareNumbers, randomNumber } from '../guessUtils.js';
 // import example from '../example.js';
 
 const test = QUnit.test;
