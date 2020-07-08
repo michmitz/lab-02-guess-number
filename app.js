@@ -11,6 +11,8 @@ const resultDisplay = document.querySelector('#Display-result');
 console.log(resultDisplay);
 
 
+
+
 // initialize state
 
 let triesLeft = 4;
@@ -24,14 +26,20 @@ myButton.addEventListener('click', () => {
     const correctNumber = randomNumber();
     const result = compareNumbers(guess, correctNumber);
 
+    triesLeft--;
+
     if (result === 0) {
         resultDisplay.textContent = ('You won a Tesla!');
     } 
     
-    if (triesLeft > 0 && result !== 0) {
-        triesLeft--;
+    if (triesLeft > 1 && result !== 0) {
         resultDisplay.textContent = `You have ${triesLeft} tries left.`;
         console.log('tries left', triesLeft);
+    }
+
+    if (triesLeft === 1 && result !== 0) {
+        resultDisplay.textContent = `You have ${triesLeft} try left.`;
+        console.log('one try left', triesLeft);
     }
 
     if (triesLeft === 0 && result !== 0) {

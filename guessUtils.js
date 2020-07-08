@@ -16,6 +16,7 @@ export function compareNumbers(guess, correctNumber) {
     }
 }
 
+//highOrLow function I haven't figured out how to use yet
 /*export function highOrLow(result) {
     if (result === 1) {
         return ('too high ya dingus!');
