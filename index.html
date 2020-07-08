@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="styles/reset.css">
     <link rel="stylesheet" href="styles/style.css">
     <link rel="stylesheet" href="styles/home.css">
+    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
     <title>Document</title>
 </head>
 
@@ -20,22 +21,23 @@
     </header>
     <main>
         <section class="main-section">
-            <h1>Welcome to the guessing game!</h1>
+            <h1>Want to win a Tesla in a totally legit way?</h1>
 
             <h2 class="instructions">Instructions:</h2>
                 <ol>
-                    <li>Guess a number between 1 and 20.</li>
-                    <li>You have four tries.</li>
+                    <li>Guess a number between 1 and 20. You have four tries.</li>
                     <li>If you guess correctly, you win a Tesla! If you run out of tries, you lose!</li>
-                    <li>You will be told whether your guess is too high or low.</li>
+                    <li>You will be told whether your guess is too high or low after each try, so if you continuously get it wrong you might be a little embarrassed.</li>
                     <li>Remember, you'll get a Tesla if you guess correctly so you should work on your psychic powers before attempting.</li>
                 </ol>
             <br>
-            <section>
+            
+            <section class="game-section">
                 <h3>Enter a number below between 1 and 20...</h3>
-                <input id="input"></input>
+                <input type="number" id="input" placeholder="ex. 5"></input>
                 <button id="button">Show me the Tesla!</button>
-                <span id="Display-result">Display: Result Here</span>  
+                <span id="display-result">Vroom vroom lol</span>  
+                <span id="number-comparison"></span>
             </section>
 
 

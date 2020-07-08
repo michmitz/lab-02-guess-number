@@ -7,9 +7,11 @@ console.log(userInput);
 const myButton = document.querySelector('#button');
 console.log(myButton);
 
-const resultDisplay = document.querySelector('#Display-result');
+const resultDisplay = document.querySelector('#display-result');
 console.log(resultDisplay);
 
+const numberCompDisplay = document.querySelector('#number-comparison');
+console.log(resultDisplay);
 
 
 
@@ -31,6 +33,14 @@ myButton.addEventListener('click', () => {
     if (result === 0) {
         resultDisplay.textContent = ('You won a Tesla!');
     } 
+
+    if (result === 1) {
+        numberCompDisplay.textContent = ('Your guess was too high.');
+    }
+
+    if (result === -1) {
+        numberCompDisplay.textContent = ('Your guess was too low.');
+    }
     
     if (triesLeft > 1 && result !== 0) {
         resultDisplay.textContent = `You have ${triesLeft} tries left.`;
@@ -44,6 +54,7 @@ myButton.addEventListener('click', () => {
 
     if (triesLeft === 0 && result !== 0) {
         resultDisplay.textContent = `You lost, sorry my dude.`;
+        
     }
     
 
