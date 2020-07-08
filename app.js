@@ -32,6 +32,7 @@ myButton.addEventListener('click', () => {
 
     if (result === 0) {
         resultDisplay.textContent = ('You won a Tesla!');
+        myButton.style.display = 'none';
     } 
 
     if (result === 1) {
@@ -53,9 +54,10 @@ myButton.addEventListener('click', () => {
     }
 
     if (triesLeft === 0 && result !== 0) {
-        resultDisplay.textContent = `You lost, sorry my dude.`;
-        
+        resultDisplay.textContent = `You lost, sorry my dude. Refresh the page to try again!`;
+        myButton.style.display = 'none';
     }
     
 
 });
+

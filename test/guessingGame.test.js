@@ -31,3 +31,4 @@ test('should take in a number and compare it to another number, yielding 1 if hi
     expect.equal(actual2, expected2);
     expect.equal(actual3, expected3);
 });
+
