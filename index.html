@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/reset.css">
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/home.css">
+    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Galada&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+
+<body>
+    <header>
+        <div class="gutter-right logo">
+            <img src="assets/big-logo.png"/>
+        </div>
+    </header>
+    <main>
+        <section class="main-section">
+            <div class="header-box">
+            <h1>Want to win a Tesla in a totally legit way?</h1>
+            </div>
+
+            <h2 class="instructions">Instructions:</h2>
+                <ol>
+                    <li>Guess a number between 1 and 20. You have four tries.</li>
+                    <li>If you guess correctly, you win a Tesla! If you run out of tries, you lose!</li>
+                    <li>You will be told whether your guess is too high or low after each try, so if you continuously get it wrong you might be a little embarrassed.</li>
+                    <li>Remember, you'll get a Tesla if you guess correctly so you should work on your psychic powers before attempting.</li>
+                </ol>
+            <br>
+
+            <section class="game-section">
+                <h3>Enter a number below between 1 and 20...</h3>
+                <input type="number" id="input" placeholder="ex. 5"></input>
+                <button id="button">Show me the Tesla!</button>
+                <span id="display-result">Vroom vroom lol</span>  
+                <span id="number-comparison"></span>
+            </section>
+
+        </section>
+    </main>
+    <footer>
+        <div class="copy gutter-right">&copy; 2020 Alchemy Code Lab</div>
+    </footer>
+
+    <script type="module" src="app.js"></script>
+</body>
+
+</html>
