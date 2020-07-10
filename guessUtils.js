@@ -1,7 +1,6 @@
 
 export function randomNumber() {
-    Math.ceil(Math.random() * 20);
-
+    return Math.ceil(Math.random() * 20); 
 }
 
 export function compareNumbers(guess, correctNumber) {
@@ -16,13 +15,11 @@ export function compareNumbers(guess, correctNumber) {
     }
 }
 
-//highOrLow function I haven't figured out how to use yet
-/*export function highOrLow(result) {
+export function highOrLow(result) {
     if (result === 1) {
         return ('too high ya dingus!');
     } else if (result === -1) {
         return ('too low ya dingus!');
     }
-}*/
-
-
+    
+}
